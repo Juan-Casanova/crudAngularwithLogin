@@ -48,14 +48,15 @@ export class EditUserComponent implements OnInit {
   }
 
   upDate(){
-    const data: any = {
+    let data: any = {
       firstName: this.upDateUser.value.firstName,
       lastName: this.upDateUser.value.lastName,
       email: this.upDateUser.value.email,
       password: this.upDateUser.value.password
     }
 
-    this._userServices.upDate(this.id,data).subscribe(()=>{
+    this._userServices.upDate(this.id,data).subscribe((info)=>{
+      console.log(info)
       this.router.navigate(['/home'])
     })
 

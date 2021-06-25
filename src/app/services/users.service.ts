@@ -67,7 +67,12 @@ export class UsersService {
       "x-access-token" : this.getToken(),
       "Content-Type" : this.contentType 
     })
-    return this.http.post(this.url+"users/update/",{id:id, data}, {headers})
+    return this.http.post(this.url+"users/update/",{
+      id:id, 
+      firstName: data.firstName,
+      lastName: data.lastName,
+      email: data.email,
+      password: data.password}, {headers})
   }
 
 }
