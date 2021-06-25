@@ -1,0 +1,51 @@
+<div id="containerForm">
+    <h2>Registrarse</h2>
+    <form [formGroup]= "upDateUser" (ngSubmit)="upDate()">
+
+        <div class="mb-3 row p-2">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Actual Nombre</label>
+            <div class="col-sm-10">
+              <p>{{firstNameAc}}</p>
+            </div>
+            <label for="staticEmail" class="col-sm-2 col-form-label">Nuevo nombre</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="staticEmail" placeholder="Jose" formControlName="firstName">
+            </div>
+        </div>
+
+        <div class="mb-3 row p-2">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Actual Apellido</label>
+            <div class="col-sm-10">
+                <p>{{lastNameAc}}</p>
+              </div>
+          <label for="staticEmail" class="col-sm-2 col-form-label">Nuevo Apellido</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="staticEmail" placeholder="Perez" formControlName="lastName">
+          </div>
+        </div>
+
+        <div class="mb-3 row p-2">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Actual Email</label>
+            <div class="col-sm-10">
+                <p>{{emailAc}}</p>
+            </div>
+          <label for="staticEmail" class="col-sm-2 col-form-label">Nuevo Email</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="staticEmail" placeholder="Perez@correo.com" formControlName="email">
+          </div>
+        </div>
+
+        <div class="mb-3 row p-2">
+            <label for="inputPassword" class="col-sm-2 col-form-label">actual Password</label>
+            <div class="col-sm-10">
+                {{passwordAc}}
+            </div>
+          <label for="inputPassword" class="col-sm-2 col-form-label">Nueva Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword" placeholder="***********" formControlName="password">
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="botonSend">Guardar Cambios</button>
+    </form>
+</div>

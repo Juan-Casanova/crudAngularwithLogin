@@ -1,0 +1,13 @@
+#containerForm {
+    width: 35%;
+    margin-left: 32%;
+    border: 2px groove black;
+    height: auto;
+    margin-top: 15px;
+}
+
+#botonSend {
+    width: 30%;
+    margin-left: 35%;
+    margin-bottom: 15px;
+}
